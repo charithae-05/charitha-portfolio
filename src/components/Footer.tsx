@@ -39,9 +39,11 @@ export default function Footer() {
             <a href={profile.linkedin} target="_blank" rel="noopener" className="block py-1.5 text-neutral-700 text-[15px] hover:text-black">
               LinkedIn
             </a>
-            <a href={profile.github} target="_blank" rel="noopener" className="block py-1.5 text-neutral-700 text-[15px] hover:text-black">
-              GitHub
-            </a>
+            {profile.github !== "#" && (
+              <a href={profile.github} target="_blank" rel="noopener" className="block py-1.5 text-neutral-700 text-[15px] hover:text-black">
+                GitHub
+              </a>
+            )}
           </div>
         </div>
 

@@ -11,7 +11,7 @@ export const profile = {
   phoneHref: "tel:+918197450054",
   email: "charithae05@gmail.com",
   linkedin: "https://linkedin.com/in/charitha-e",
-  github: "https://github.com/charithae-05",
+  github: "#", // TODO: add your GitHub URL once your profile has projects
   tagline: "FRONT-END DEVELOPER — BENGALURU",
   bio: "From responsive layouts to fast, SEO-optimized production sites, I build web interfaces with React and Next.js that solve real business problems. Let's build something that performs.",
   stats: [
