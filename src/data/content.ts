@@ -9,8 +9,8 @@ export const profile = {
   location: "Bengaluru",
   phone: "+91 81974 50054",
   phoneHref: "tel:+918197450054",
-  email: "charitha@example.com", // TODO: replace with your real email
-  linkedin: "#", // TODO: add your LinkedIn URL
+  email: "charithae05@gmail.com",
+  linkedin: "https://linkedin.com/in/charitha-e",
   github: "https://github.com/charithae-05",
   tagline: "FRONT-END DEVELOPER — BENGALURU",
   bio: "From responsive layouts to fast, SEO-optimized production sites, I build web interfaces with React and Next.js that solve real business problems. Let's build something that performs.",
