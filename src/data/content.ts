@@ -161,42 +161,14 @@ export const experience: ExperienceItem[] = [
       "Applied Figma and GitHub in real project workflows — earning a promotion to Associate.",
     ],
   },
-  {
-    when: "Dec 2023 — Jun 2024",
-    title: "Fitness Consultant (Part-Time)",
-    org: "The Fitness Zone — Cult.fit · Bengaluru",
-    points: [
-      "Delivered personalized fitness plans and ongoing motivation, improving member engagement and satisfaction.",
-    ],
-  },
-  {
-    when: "Mar 2023 — Jul 2023",
-    title: "Intern",
-    org: "CSD, MSIS, MAHE · Udupi",
-    points: [
-      "Implemented a 3-tier architecture and designed pages using the ASP.NET framework.",
-      "Managed data connections and diagnosed errors using breakpoints while meeting deadlines.",
-    ],
-  },
 ];
 
-export const education = [
-  {
-    degree: "Master of Computer Applications (MCA)",
-    sub: "Manipal Institute of Technology (MIT), Bengaluru · 2023–2024",
-  },
-  {
-    degree: "Bachelor of Computer Applications (BCA)",
-    sub: "Presidency College, Bengaluru · 2021–2023",
-  },
-];
-
-export const languages = ["English", "Hindi", "Kannada", "Telugu", "Tamil"];
+// Condensed to a single line for the portfolio.
+export const education =
+  "MCA — Manipal Institute of Technology (MIT), Bengaluru  ·  BCA — Presidency College, Bengaluru";
 
 export const certifications = [
   "The Ultimate React Course 2024: React, Redux & More — building real-world applications.",
-  "Introduction to Relational Databases and SQL — tables, basic SQL statements and querying.",
-  "Data Analytics Workshop — data analytics using Power BI with an end-to-end project.",
 ];
 
 export const faq = [
