@@ -1,5 +1,6 @@
 import type { Project } from "@/data/content";
 import Reveal from "./Reveal";
+import ProjectMedia from "./ProjectMedia";
 
 const frameTheme: Record<Project["theme"], string> = {
   dark: "bg-[#0d0d0d]",
@@ -11,33 +12,37 @@ const frameTheme: Record<Project["theme"], string> = {
 export default function ProjectCard({ project }: { project: Project }) {
   return (
     <Reveal className="mb-[90px] last:mb-0">
-      {/* Themed frame holding a browser-style mockup */}
+      {/* Themed frame: real screenshot/video if provided, else a styled mock */}
       <div
         className={`rounded-xl2 overflow-hidden min-h-[460px] grid place-items-center p-12 ${frameTheme[project.theme]}`}
       >
-        <div className="bg-white rounded-[14px] w-full max-w-[640px] shadow-[0_30px_70px_rgba(0,0,0,0.25)] overflow-hidden">
-          <div className="flex gap-[7px] px-4 py-3.5 border-b border-neutral-100">
-            <i className="w-[11px] h-[11px] rounded-full bg-neutral-200" />
-            <i className="w-[11px] h-[11px] rounded-full bg-neutral-200" />
-            <i className="w-[11px] h-[11px] rounded-full bg-neutral-200" />
-          </div>
-          <div className="p-[30px]">
-            <h4 className="font-serif text-[30px] font-semibold mb-2">{project.mock.title}</h4>
-            <p className="text-muted text-[14px]">{project.mock.sub}</p>
-            <div className="mt-[22px] grid gap-2.5">
-              <span className="block h-[11px] rounded-md bg-neutral-100" />
-              <span className="block h-[11px] rounded-md bg-neutral-100 w-4/5" />
-              <span className="block h-[11px] rounded-md bg-neutral-100 w-[55%]" />
+        {project.image ? (
+          <ProjectMedia image={project.image} video={project.video} alt={`${project.title} screenshot`} />
+        ) : (
+          <div className="bg-white rounded-[14px] w-full max-w-[640px] shadow-[0_30px_70px_rgba(0,0,0,0.25)] overflow-hidden">
+            <div className="flex gap-[7px] px-4 py-3.5 border-b border-neutral-100">
+              <i className="w-[11px] h-[11px] rounded-full bg-neutral-200" />
+              <i className="w-[11px] h-[11px] rounded-full bg-neutral-200" />
+              <i className="w-[11px] h-[11px] rounded-full bg-neutral-200" />
             </div>
-            <div className="mt-[22px] flex gap-2 flex-wrap">
-              {project.mock.chips.map((c) => (
-                <b key={c} className="text-[11px] font-medium px-3 py-1.5 rounded-full bg-accent-soft text-neutral-600">
-                  {c}
-                </b>
-              ))}
+            <div className="p-[30px]">
+              <h4 className="font-serif text-[30px] font-semibold mb-2">{project.mock.title}</h4>
+              <p className="text-muted text-[14px]">{project.mock.sub}</p>
+              <div className="mt-[22px] grid gap-2.5">
+                <span className="block h-[11px] rounded-md bg-neutral-100" />
+                <span className="block h-[11px] rounded-md bg-neutral-100 w-4/5" />
+                <span className="block h-[11px] rounded-md bg-neutral-100 w-[55%]" />
+              </div>
+              <div className="mt-[22px] flex gap-2 flex-wrap">
+                {project.mock.chips.map((c) => (
+                  <b key={c} className="text-[11px] font-medium px-3 py-1.5 rounded-full bg-accent-soft text-neutral-600">
+                    {c}
+                  </b>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
 
       {/* Project info */}

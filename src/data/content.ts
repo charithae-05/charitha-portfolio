@@ -62,7 +62,9 @@ export type Project = {
   tags: string[];
   theme: ProjectTheme;
   link?: string; // optional live URL — shows a "View live" link on the card
-  mock: { title: string; sub: string; chips: string[] };
+  image?: string; // optional screenshot path in /public (e.g. "/mojocampus.png")
+  video?: string; // optional looping clip in /public (e.g. "/mojocampus.mp4") — plays on hover
+  mock: { title: string; sub: string; chips: string[] }; // fallback when no image/video
 };
 
 export const projects: Project[] = [
@@ -73,6 +75,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "React", "Tailwind", "SEO", "Responsive"],
     theme: "dark",
     link: "https://www.mojocampus.com/",
+    image: "/mojocampus.png",
     mock: {
       title: "Mojo Campus",
       sub: "Main site plus 5 college microsites, built end-to-end.",
