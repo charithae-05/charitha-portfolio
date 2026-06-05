@@ -54,6 +54,17 @@ export default function ProjectCard({ project }: { project: Project }) {
               </b>
             ))}
           </div>
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-1.5 text-[15px] font-medium text-ink underline underline-offset-4 decoration-neutral-300 hover:decoration-ink transition-colors"
+            >
+              View live
+              <span aria-hidden>↗</span>
+            </a>
+          )}
         </div>
       </div>
     </Reveal>

@@ -15,7 +15,7 @@ export const profile = {
   tagline: "FRONT-END DEVELOPER — BENGALURU",
   bio: "From responsive layouts to fast, SEO-optimized production sites, I build web interfaces with React and Next.js that solve real business problems. Let's build something that performs.",
   stats: [
-    { value: "2+", label: "Years building front-ends" },
+    { value: "2", label: "Years building front-ends" },
     { value: "6+", label: "Live products & sites" },
     { value: "100", label: "Lighthouse-driven mindset" },
   ],
@@ -61,6 +61,7 @@ export type Project = {
   blurb: string;
   tags: string[];
   theme: ProjectTheme;
+  link?: string; // optional live URL — shows a "View live" link on the card
   mock: { title: string; sub: string; chips: string[] };
 };
 
@@ -68,13 +69,27 @@ export const projects: Project[] = [
   {
     title: "Miles Web Suite",
     blurb:
-      "Developed and maintained mileseducation.com, mojocampus.com and milestalenthub.com using Next.js, React and Tailwind CSS — with dynamic content via Strapi and deployments on AWS S3 & CloudFront.",
+      "Developed and maintained mileseducation.com and milestalenthub.com using Next.js, React and Tailwind CSS — with dynamic content via Strapi and deployments on AWS S3 & CloudFront.",
     tags: ["Next.js", "React", "Tailwind", "Strapi", "AWS", "SEO / PSI"],
     theme: "dark",
+    link: "https://www.mileseducation.com/",
     mock: {
       title: "Miles Education",
       sub: "Marketing & learning platforms built and maintained in Next.js.",
       chips: ["Next.js", "Strapi CMS", "AWS S3 + CloudFront", "SEO"],
+    },
+  },
+  {
+    title: "Mojo Campus",
+    blurb:
+      "Solely built and shipped the Mojo Campus site and its campus-specific microsites — including the BTM, Christ University, Christ Bannerghatta, St. Joseph's and MCC pages — as responsive, SEO-optimized layouts in Next.js.",
+    tags: ["Next.js", "React", "Tailwind", "SEO", "Responsive"],
+    theme: "yellow",
+    link: "https://www.mojocampus.com/",
+    mock: {
+      title: "Mojo Campus",
+      sub: "Main site plus 5 college microsites, built end-to-end.",
+      chips: ["Next.js", "Microsites", "SEO", "Responsive"],
     },
   },
   {
