@@ -138,16 +138,61 @@ export const projects: Project[] = [
     },
   },
   {
-    title: "Miles Web Suite",
+    title: "Miles Education — Glimpses",
     blurb:
-      "Developed and maintained mileseducation.com and milestalenthub.com using Next.js, React and Tailwind CSS — with dynamic content via Strapi and deployments on AWS S3 & CloudFront.",
-    tags: ["Next.js", "React", "Tailwind", "Strapi", "AWS", "SEO / PSI"],
+      "Built and maintained core Miles Education pages in Next.js, React and Tailwind — dynamic content via Strapi, deployed on AWS S3 & CloudFront with SEO and performance tuning. Flip for a tour of the homepage, US-Jobs and CAIRA pages.",
+    tags: ["Next.js", "React", "Tailwind", "Strapi", "AWS", "SEO"],
     theme: "yellow",
     link: "https://www.mileseducation.com/",
+    image: "/miles-home.png",
+    clips: [
+      { src: "/clips/miles-home.mp4", webm: "/clips/miles-home.webm", label: "mileseducation.com — homepage" },
+      { src: "/clips/miles-usjobs.mp4", webm: "/clips/miles-usjobs.webm", label: "US Jobs for Accountants" },
+      { src: "/clips/miles-caira.mp4", webm: "/clips/miles-caira.webm", label: "CAIRA" },
+    ],
     mock: {
       title: "Miles Education",
       sub: "Marketing & learning platforms built and maintained in Next.js.",
-      chips: ["Next.js", "Strapi CMS", "AWS S3 + CloudFront", "SEO"],
+      chips: ["Next.js", "Strapi CMS", "AWS", "SEO"],
+    },
+  },
+  {
+    title: "Miles CPA & CMA",
+    blurb:
+      "Built the Miles CPA and CMA landing pages, including the animated 'Learn With Us Across India or Anywhere Else' section — a scrolling band of illustrated city landmarks. Flip the card to see it in both desktop and mobile.",
+    tags: ["Next.js", "Animation", "Responsive", "SEO"],
+    theme: "forest",
+    link: "https://www.mileseducation.com/cpa/miles-cpa",
+    image: "/miles-cpa.png",
+    clips: [
+      { src: "/clips/miles-cpa-anim-d.mp4", webm: "/clips/miles-cpa-anim-d.webm", label: "CPA — Learn With Us (desktop)" },
+      { src: "/clips/miles-cpa-anim-m.mp4", webm: "/clips/miles-cpa-anim-m.webm", label: "CPA — Learn With Us (mobile)" },
+      { src: "/clips/miles-cma-anim-d.mp4", webm: "/clips/miles-cma-anim-d.webm", label: "CMA — Learn With Us (desktop)" },
+      { src: "/clips/miles-cma-anim-m.mp4", webm: "/clips/miles-cma-anim-m.webm", label: "CMA — Learn With Us (mobile)" },
+    ],
+    mock: {
+      title: "Miles CPA & CMA",
+      sub: "Course landing pages with an animated India-wide locations section.",
+      chips: ["Next.js", "Animation", "Responsive"],
+    },
+  },
+  {
+    title: "Miles Programs",
+    blurb:
+      "Built the CPA, CMA and EA program pages on a shared, responsive design system — consistent layout and components tuned for SEO across all three. Flip the card to compare them.",
+    tags: ["Next.js", "Reusable UI", "SEO", "Responsive"],
+    theme: "sand",
+    link: "https://www.mileseducation.com/cpa",
+    image: "/miles-programs.png",
+    clips: [
+      { src: "/clips/miles-prog-cpa.mp4", webm: "/clips/miles-prog-cpa.webm", label: "CPA program page" },
+      { src: "/clips/miles-prog-cma.mp4", webm: "/clips/miles-prog-cma.webm", label: "CMA program page" },
+      { src: "/clips/miles-prog-ea.mp4", webm: "/clips/miles-prog-ea.webm", label: "EA program page" },
+    ],
+    mock: {
+      title: "Miles Programs",
+      sub: "CPA, CMA & EA pages on one shared design system.",
+      chips: ["Next.js", "Reusable UI", "SEO"],
     },
   },
   {
@@ -223,15 +268,6 @@ export const experience: ExperienceItem[] = [
       "Deploy to AWS S3 & CloudFront for consistent availability, and manage version control and UAT via GitHub.",
       "Run SEO optimizations (metadata, schema, Ahrefs fixes), PSI audits and Lighthouse assessments; manage dynamic content in Strapi.",
       "Track work in Jira & Zoho Sprints and analyze user behavior with Clarity to inform design enhancements.",
-    ],
-  },
-  {
-    when: "Jul 2024 — Aug 2024",
-    title: "Front-End Developer Intern",
-    org: "Miles Education Pvt Ltd · Bengaluru",
-    points: [
-      "Mastered React, Next.js, JavaScript, HTML, CSS and Tailwind during an intensive learning phase.",
-      "Applied Figma and GitHub in real project workflows — earning a promotion to Associate.",
     ],
   },
 ];

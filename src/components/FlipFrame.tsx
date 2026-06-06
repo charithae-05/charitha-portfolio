@@ -84,7 +84,7 @@ export default function FlipFrame({ image, alt, clips }: FlipFrameProps) {
                     autoPlay
                     playsInline
                     preload="metadata"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   >
                     <Sources clip={current} />
                   </video>
