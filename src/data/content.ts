@@ -80,7 +80,7 @@ export const projects: Project[] = [
   {
     title: "Mojo Campus",
     blurb:
-      "Solely built and shipped the Mojo Campus site and its campus-specific microsites — including the BTM, Christ University, Christ Bannerghatta, St. Joseph's and MCC pages — as responsive, SEO-optimized layouts in Next.js.",
+      "Solely built and shipped the Mojo Campus marketing site in Next.js — a responsive, SEO-optimized experience with location search, an alumni showcase, and an interactive 'Explore' page with map-based PG discovery. Flip the card to see it in action.",
     tags: ["Next.js", "React", "Tailwind", "SEO", "Responsive"],
     theme: "dark",
     link: "https://www.mojocampus.com/",
@@ -93,8 +93,47 @@ export const projects: Project[] = [
     ],
     mock: {
       title: "Mojo Campus",
-      sub: "Main site plus 5 college microsites, built end-to-end.",
-      chips: ["Next.js", "Microsites", "SEO", "Responsive"],
+      sub: "The main Mojo Campus marketing site, built end-to-end.",
+      chips: ["Next.js", "Search", "Maps", "SEO"],
+    },
+  },
+  {
+    title: "Campus Microsites",
+    blurb:
+      "Built a family of campus-specific microsites on a shared, content-driven design — Christ University, Christ Bannerghatta, St. Joseph's and MCC — each responsive and SEO-tuned. Flip the card to tour each one.",
+    tags: ["Next.js", "Reusable UI", "Content-driven", "SEO"],
+    theme: "sand",
+    link: "https://christ.mojocampus.com/",
+    image: "/christ.png",
+    clips: [
+      { src: "/clips/christ.mp4", webm: "/clips/christ.webm", label: "Christ University" },
+      { src: "/clips/christ-bannerghatta.mp4", webm: "/clips/christ-bannerghatta.webm", label: "Christ Bannerghatta" },
+      { src: "/clips/st-josephs.mp4", webm: "/clips/st-josephs.webm", label: "St. Joseph's" },
+      { src: "/clips/mcc.mp4", webm: "/clips/mcc.webm", label: "MCC" },
+    ],
+    mock: {
+      title: "Campus Microsites",
+      sub: "Four college microsites on one shared design system.",
+      chips: ["Next.js", "Reusable UI", "SEO"],
+    },
+  },
+  {
+    title: "MOJO Claret · BTM",
+    blurb:
+      "Designed and built the fully interactive, dark-themed MOJO Claret (BTM) page — an animated banner with a rolling text intro and section navigation, click-to-switch room types, and scroll-driven section transitions. Flip the card to see the motion.",
+    tags: ["Next.js", "Animation", "Interactive", "Scroll FX"],
+    theme: "dark",
+    link: "https://btm.mojocampus.com/",
+    image: "/btm.png",
+    clips: [
+      { src: "/clips/btm-banner.mp4", webm: "/clips/btm-banner.webm", label: "Animated banner & text-roll intro" },
+      { src: "/clips/btm-rooms.mp4", webm: "/clips/btm-rooms.webm", label: "Room types — click to switch (1RK/1BHK/2BHK)" },
+      { src: "/clips/btm-scroll.mp4", webm: "/clips/btm-scroll.webm", label: "Scroll-driven section transitions" },
+    ],
+    mock: {
+      title: "MOJO Claret · BTM",
+      sub: "A fully interactive, animated dark-themed campus page.",
+      chips: ["Animation", "Interactive", "Scroll FX"],
     },
   },
   {
