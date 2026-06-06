@@ -17,7 +17,7 @@ export const profile = {
   stats: [
     { value: "2", label: "Years building front-ends" },
     { value: "6+", label: "Live products & sites" },
-    { value: "100", label: "Lighthouse-driven mindset" },
+    { value: "100", label: "PSI/Lighthouse-driven mindset" },
   ],
 };
 
@@ -56,6 +56,14 @@ export const belief =
 
 export type ProjectTheme = "dark" | "forest" | "sand" | "yellow";
 
+// A short functionality demo shown on the back of a flip card.
+export type Clip = {
+  src: string; // MP4 path in /public (universal fallback, e.g. "/clips/mojo-search.mp4")
+  webm?: string; // optional WebM path — smaller, used first where supported
+  label: string; // tiny caption under the clip
+  poster?: string; // optional still frame shown before play
+};
+
 export type Project = {
   title: string;
   blurb: string;
@@ -63,8 +71,9 @@ export type Project = {
   theme: ProjectTheme;
   link?: string; // optional live URL — shows a "View live" link on the card
   image?: string; // optional screenshot path in /public (e.g. "/mojocampus.png")
-  video?: string; // optional looping clip in /public (e.g. "/mojocampus.mp4") — plays on hover
-  mock: { title: string; sub: string; chips: string[] }; // fallback when no image/video
+  video?: string; // optional looping clip in /public — plays on hover (single-media cards)
+  clips?: Clip[]; // optional set of demos — turns the card into a flip card
+  mock: { title: string; sub: string; chips: string[] }; // fallback when no image/clips
 };
 
 export const projects: Project[] = [
@@ -76,6 +85,12 @@ export const projects: Project[] = [
     theme: "dark",
     link: "https://www.mojocampus.com/",
     image: "/mojocampus.png",
+    clips: [
+      { src: "/clips/mojo-search.mp4", webm: "/clips/mojo-search.webm", label: "Banner search — find colleges & areas" },
+      { src: "/clips/mojo-alumni.mp4", webm: "/clips/mojo-alumni.webm", label: "Words from the campus — alumni cards" },
+      { src: "/clips/mojo-life.mp4", webm: "/clips/mojo-life.webm", label: "Life at MOJO — scroll experience" },
+      { src: "/clips/explore-maps.mp4", webm: "/clips/explore-maps.webm", label: "Explore — search + interactive map" },
+    ],
     mock: {
       title: "Mojo Campus",
       sub: "Main site plus 5 college microsites, built end-to-end.",

@@ -1,6 +1,7 @@
 import type { Project } from "@/data/content";
 import Reveal from "./Reveal";
 import ProjectMedia from "./ProjectMedia";
+import FlipFrame from "./FlipFrame";
 
 const frameTheme: Record<Project["theme"], string> = {
   dark: "bg-[#0d0d0d]",
@@ -16,7 +17,9 @@ export default function ProjectCard({ project }: { project: Project }) {
       <div
         className={`rounded-xl2 overflow-hidden min-h-[460px] grid place-items-center p-12 ${frameTheme[project.theme]}`}
       >
-        {project.image ? (
+        {project.image && project.clips?.length ? (
+          <FlipFrame image={project.image} clips={project.clips} alt={`${project.title} screenshot`} />
+        ) : project.image ? (
           <ProjectMedia image={project.image} video={project.video} alt={`${project.title} screenshot`} />
         ) : (
           <div className="bg-white rounded-[14px] w-full max-w-[640px] shadow-[0_30px_70px_rgba(0,0,0,0.25)] overflow-hidden">
