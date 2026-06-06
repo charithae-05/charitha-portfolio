@@ -128,7 +128,8 @@ export const projects: Project[] = [
     clips: [
       { src: "/clips/btm-banner.mp4", webm: "/clips/btm-banner.webm", label: "Animated banner & text-roll intro" },
       { src: "/clips/btm-rooms.mp4", webm: "/clips/btm-rooms.webm", label: "Room types — click to switch (1RK/1BHK/2BHK)" },
-      { src: "/clips/btm-scroll.mp4", webm: "/clips/btm-scroll.webm", label: "Scroll-driven section transitions" },
+      { src: "/clips/btm-amenities.mp4", webm: "/clips/btm-amenities.webm", label: "Amenities, About & Gallery — scroll FX" },
+      { src: "/clips/btm-testimonial.mp4", webm: "/clips/btm-testimonial.webm", label: "Words From The Campus — testimonials" },
     ],
     mock: {
       title: "MOJO Claret · BTM",
