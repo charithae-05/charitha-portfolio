@@ -26,18 +26,35 @@ export default function FlipFrame({ image, alt, clips }: FlipFrameProps) {
       >
         {/* ---------- FRONT: screenshot ---------- */}
         <div className="[backface-visibility:hidden]">
-          <div className="relative rounded-[14px] overflow-hidden shadow-[0_30px_70px_rgba(0,0,0,0.25)] bg-white">
+          <button
+            type="button"
+            onClick={() => setFlipped(true)}
+            aria-label="See it in action — flip to view functionality demos"
+            className="group/front relative block w-full text-left rounded-[14px] overflow-hidden shadow-[0_30px_70px_rgba(0,0,0,0.25)] bg-white cursor-pointer"
+          >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={image} alt={alt} className="block w-full h-auto" loading="lazy" />
-            <button
-              type="button"
-              onClick={() => setFlipped(true)}
-              className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 bg-ink/90 text-white text-[13px] font-medium px-4 py-2 rounded-full backdrop-blur-sm hover:bg-ink transition-colors"
-            >
-              See it in action
-              <span aria-hidden>↻</span>
-            </button>
-          </div>
+
+            {/* Hover overlay hint — makes it obvious the screenshot is interactive */}
+            <span className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover/front:bg-black/35 transition-colors duration-300">
+              <span className="inline-flex items-center gap-2 bg-white text-ink text-[15px] font-semibold px-6 py-3 rounded-full shadow-xl opacity-0 translate-y-2 group-hover/front:opacity-100 group-hover/front:translate-y-0 transition-all duration-300">
+                <span aria-hidden className="text-[18px] leading-none">↻</span>
+                See it in action
+              </span>
+            </span>
+
+            {/* Persistent pulsing badge — always visible attention cue */}
+            <span className="absolute bottom-3 right-3 inline-flex items-center">
+              <span
+                aria-hidden
+                className="absolute inset-0 rounded-full bg-accent animate-ping [animation-duration:1.8s] opacity-75"
+              />
+              <span className="relative inline-flex items-center gap-1.5 bg-accent text-ink text-[13.5px] font-semibold px-4 py-2 rounded-full shadow-md ring-1 ring-black/5">
+                See it in action
+                <span aria-hidden className="text-[15px] leading-none">↻</span>
+              </span>
+            </span>
+          </button>
         </div>
 
         {/* ---------- BACK: functionality demos ---------- */}
