@@ -165,10 +165,8 @@ export const projects: Project[] = [
     link: "https://www.mileseducation.com/cpa/miles-cpa",
     image: "/miles-cpa.png",
     clips: [
-      { src: "/clips/miles-cpa-anim-d.mp4", webm: "/clips/miles-cpa-anim-d.webm", label: "CPA — Learn With Us (desktop)" },
       { src: "/clips/miles-cpa-anim-m.mp4", webm: "/clips/miles-cpa-anim-m.webm", label: "CPA — Learn With Us (mobile)" },
       { src: "/clips/miles-cma-anim-d.mp4", webm: "/clips/miles-cma-anim-d.webm", label: "CMA — Learn With Us (desktop)" },
-      { src: "/clips/miles-cma-anim-m.mp4", webm: "/clips/miles-cma-anim-m.webm", label: "CMA — Learn With Us (mobile)" },
     ],
     mock: {
       title: "Miles CPA & CMA",
